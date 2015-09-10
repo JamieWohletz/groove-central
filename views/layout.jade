@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/semantic.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    .ui.secondary.top.pointing.menu
+      a.item
+        strong Groove Central
+      .right.menu
+        a.active.item Home
+        a.item Host
+        a.item Join
+    .ui.bottom.attached.segment
+        block content
+    script(src='/javascripts/vendor/jquery-2.1.4.min.js')
+    script(src='/javascripts/vendor/semantic.min.js')
