@@ -1,6 +1,14 @@
 extends layout
 
 block content
-  h1.ui.header Welcome to Groove Central!
-  p Groove Central is your single destination for finding or hosting dance classes in your area!
-
+  script(src="/bc/angularjs/angular.js")
+  script(src="/js/index/controllers.js")
+  div(ng-app="grooveCentral")
+    div(ng-controller="HostCtrl")
+      .ui.list(ng-repeat="class in classes")
+        .ui.segment
+          .item
+            h3.header {{class.style}}
+            .description
+              {{class.time}}, {{class.day}}
+        

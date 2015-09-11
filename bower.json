@@ -1,0 +1,33 @@
+{
+  "name": "groove-central",
+  "version": "0.0.0",
+  "homepage": "https://github.com/JamieWohletz/groove-central",
+  "authors": [
+    "Jamie Wohletz <reflectiveresistance@gmail.com>"
+  ],
+  "description": "The central hub for joining and hosting dance classes.",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "dance",
+    "groove",
+    "central",
+    "dancing",
+    "classes"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic-ui": "~2.1.3",
+    "angularjs": "~1.4.5",
+    "jquery": "~2.1.4"
+  }
+}

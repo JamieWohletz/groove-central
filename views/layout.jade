@@ -2,17 +2,16 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/semantic.min.css')
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/bc/semantic-ui/dist/semantic.min.css')
+    link(rel='stylesheet', href='/css/style.css')
   body
     .ui.secondary.top.pointing.menu
       a.item
         strong Groove Central
       .right.menu
         a.active.item Home
-        a.item Host
-        a.item Join
-    .ui.bottom.attached.segment
+        a.item About 
+    .ui.bottom.attached
         block content
-    script(src='/javascripts/vendor/jquery-2.1.4.min.js')
-    script(src='/javascripts/vendor/semantic.min.js')
+    script(src='/bc/jquery/dist/jquery.min.js')
+    script(src='/bc/semantic-ui/dist/semantic.min.js')
