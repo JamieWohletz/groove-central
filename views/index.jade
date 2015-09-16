@@ -4,11 +4,17 @@ block content
   script(src="/bc/angularjs/angular.js")
   script(src="/js/index/controllers.js")
   div(ng-app="grooveCentral")
-    div(ng-controller="HostCtrl")
-      .ui.list(ng-repeat="class in classes")
-        .ui.segment
-          .item
-            h3.header {{class.style}}
-            .description
-              {{class.time}}, {{class.day}}
-        
+    div(ng-controller="ScheduleCtrl")
+      .ui.stackable.seven.column.grid
+        .column(ng-repeat="(dayName, dayObject) in classData.days")
+          .ui.segments
+            .ui.segment
+              .header.ui.two.column.grid
+                .column 
+                  h3 {{dayName}}
+                .column.right.aligned <button class="ui green small button">+</button>
+            .ui.segment
+              .description
+                .list
+                  .ui.vertical.segment(ng-repeat="(time, classes) in dayObject")
+                    h5 {{time}}

@@ -1,25 +1,51 @@
 var gc = angular.module('grooveCentral',[]);
-gc.controller('HostCtrl', function($scope) {
-  $scope.classes = [
-    {
-      style: 'Hip hop',
-      time: '6pm',
-      day: 'Wednesday'
-    },
-    {
-      style: 'Salsa',
-      time: '5pm',
-      day: 'Thursday'
-    },
-    {
-      style: 'K-pop',
-      time: '7pm',
-      day: 'Friday'
-    },
-    {
-      style: 'Swing',
-      time: '6pm',
-      day: 'Monday'
+gc.controller('ScheduleCtrl', function($scope) {
+  $scope.classData = {
+    weekStart: '9/6/15',
+    weekEnd: '9/12/15',
+    days: {
+      'Monday': {
+        '5pm': [
+          {
+            style: 'Hip hop',
+            duration: '1 hour'
+          }
+        ],
+        '6pm':[
+          {
+            style: 'Salsa',
+            duration: '30 minutes'
+          }
+        ]
+      },
+      'Tuesday': {
+        '7pm': [
+          {
+            style: 'K-pop',
+            duration: '1 hour'
+          }
+        ]
+      },
+      'Wednesday': {
+        '6pm': [
+          {
+            style: 'Swing',
+            duration: '2 hours'
+          }
+        ]
+      },
+      'Thursday': {
+
+      },
+      'Friday': {
+
+      },
+      'Saturday': {
+
+      },
+      'Sunday': {
+
+      }
     }
-  ]
+  };
 });
