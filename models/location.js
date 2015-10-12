@@ -9,7 +9,6 @@ module.exports = function(sequelize, DataTypes) {
       associate: function(models) {
         Location.hasMany(models.User, {as: 'UsersHere'});
         Location.hasMany(models.Studio, {as: 'StudiosHere'}); 
-        // associations can be defined here
       }
     }
   });

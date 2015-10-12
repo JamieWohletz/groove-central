@@ -12,11 +12,10 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        User.hasMany(models.Session, {as: 'HostedSessions'});
+        User.hasMany(models.DanceSession, {as: 'HostedDanceSessions'});
         User.hasMany(models.UserRating, {as: 'ReceivedRatings', foreignkey: 'fk_user_ratee', targetKey: 'rateeId'});
         User.hasMany(models.UserRating, {as: 'GivenRatings', foreignkey: 'fk_user_rater', targetKey: 'raterId'});
-        User.hasMany(models.UserSessionRating, {as: 'SessionRatings', foreignkey: 'fk_session_rater', targetKey: 'raterId'});
-        // associations can be defined here
+        User.hasMany(models.UserDanceSessionRating, {as: 'DanceSessionRatings', foreignkey: 'fk_session_rater', targetKey: 'raterId'});
       }
     }
   });

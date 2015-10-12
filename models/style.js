@@ -6,8 +6,7 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        Style.hasMany(models.Session, {as: 'Sessions'})
-        // associations can be defined here
+        Style.hasMany(models.DanceSession, {as: 'DanceSessions'});
       }
     }
   });

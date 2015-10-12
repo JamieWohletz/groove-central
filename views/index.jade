@@ -5,6 +5,21 @@ block content
   script(src="/js/index/controllers.js")
   div(ng-app="grooveCentral")
     div(ng-controller="ScheduleCtrl")
+      .ui.header
+        div
+          a 
+            i.chevron.left.icon 
+          span This week
+          a 
+            i.chevron.right.icon
+        <br>
+        div
+          button.ui.button.green schedule new session
+      
+      hr.ui.divider      
+      
+      .ui.divider.hidden
+  
       .ui.stackable.seven.column.grid
         .column(ng-repeat="(dayName, dayObject) in classData.days")
           .ui.segments
@@ -12,7 +27,6 @@ block content
               .header.ui.two.column.grid
                 .column 
                   h3 {{dayName}}
-                .column.right.aligned <button class="ui green small button">+</button>
             .ui.segment
               .description
                 .list

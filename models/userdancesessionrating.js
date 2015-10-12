@@ -1,12 +1,11 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
-  var DanceSessionInstance = sequelize.define('DanceSessionInstance', {
-    day: DataTypes.DATE
+  var UserDanceSessionRating = sequelize.define('UserDanceSessionRating', {
   }, {
     classMethods: {
       associate: function(models) {
       }
     }
   });
-  return DanceSessionInstance;
+  return UserDanceSessionRating;
 };

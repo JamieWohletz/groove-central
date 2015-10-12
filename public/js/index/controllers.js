@@ -1,5 +1,5 @@
 var gc = angular.module('grooveCentral',[]);
-gc.controller('ScheduleCtrl', function($scope) {
+gc.controller('ScheduleCtrl', ['$rootScope', '$scope', function($scope) {
   $scope.classData = {
     weekStart: '9/6/15',
     weekEnd: '9/12/15',
@@ -48,4 +48,4 @@ gc.controller('ScheduleCtrl', function($scope) {
       }
     }
   };
-});
+}]);
