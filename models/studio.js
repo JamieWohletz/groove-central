@@ -7,6 +7,7 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
       associate: function(models) {
         Studio.hasMany(models.DanceSession, {as: 'DanceSessions'});
+        Studio.hasMany(models.StudioPicture, {as: 'StudioPictures', foreignkey: 'fk_studio_picture', targetKey: 'studioId'});
       }
     }
   });

@@ -16,6 +16,7 @@ module.exports = function(sequelize, DataTypes) {
         User.hasMany(models.UserRating, {as: 'ReceivedRatings', foreignkey: 'fk_user_ratee', targetKey: 'rateeId'});
         User.hasMany(models.UserRating, {as: 'GivenRatings', foreignkey: 'fk_user_rater', targetKey: 'raterId'});
         User.hasMany(models.UserDanceSessionRating, {as: 'DanceSessionRatings', foreignkey: 'fk_session_rater', targetKey: 'raterId'});
+        User.hasMany(models.UserPicture, {as: 'UserPictures', foreignkey: 'fk_user_picture', targetKey: 'userId'});
       }
     }
   });

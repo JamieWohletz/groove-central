@@ -33,7 +33,7 @@ Object.keys(db).forEach(function(modelName) {
 
 //THIS LINE IS IMPORTANT! It causes Sequelize to create a table structure in the DB
 //based off the model definitions.
-sequelize.sync();
+sequelize.sync({force:true});
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
