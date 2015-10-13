@@ -14,10 +14,10 @@ block content
             i.chevron.right.icon
         br
         div
-          button.ui.button(ng-click="newSessionFormOpen = !newSessionFormOpen") schedule new session 
+          button.ui.button.green(ng-click="newSessionFormOpen = !newSessionFormOpen") Add class &nbsp;
             i(ng-class="newSessionFormOpen? 'down' : 'up'").chevron.icon
         
-        form.ui.form.segment(ng-show="newSessionFormOpen")
+        form.ui.form.green.segment(ng-show="newSessionFormOpen")
           .field
               label Style
               select
@@ -78,7 +78,7 @@ block content
             label Description
             textarea
           .field
-            label Admission Price
+            label Admission Price (optional)
             .ui.labeled.input
               .ui.label $
               input(type="number")
@@ -86,7 +86,6 @@ block content
             .ui.checkbox
               input#repeat-checkbox(type="checkbox", name="repeat")
               label(for="repeat-checkbox") Repeat weekly
-                
               
       hr.ui.divider      
       
