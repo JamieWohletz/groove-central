@@ -12,10 +12,82 @@ block content
           span This week
           a 
             i.chevron.right.icon
-        <br>
+        br
         div
-          button.ui.button.green schedule new session
-      
+          button.ui.button(ng-click="newSessionFormOpen = !newSessionFormOpen") schedule new session 
+            i(ng-class="newSessionFormOpen? 'down' : 'up'").chevron.icon
+        
+        form.ui.form.segment(ng-show="newSessionFormOpen")
+          .field
+              label Style
+              select
+                  option Hip Hop
+                  option K-Pop
+                  option Ballroom
+          .field.inline
+            label From
+            br
+            select
+              option 1
+            select 
+              option 30
+            select
+              option AM
+              option PM
+          .field.inline
+            label To
+            br
+            select
+              option 1
+            select 
+              option 30
+            select
+              option AM
+              option PM
+          .field
+            label Days
+            .field
+              .ui.checkbox
+                input#monday-checkbox(type="checkbox", name="monday")
+                label(for="monday-checkbox") Monday
+            .field
+              .ui.checkbox
+                input#tuesday-checkbox(type="checkbox", name="tuesday")
+                label(for="tuesday-checkbox") Tuesday
+            .field
+              .ui.checkbox
+                input#wednesday-checkbox(type="checkbox", name="wednesday")
+                label(for="wednesday-checkbox") Wednesday
+            .field
+              .ui.checkbox
+                input#thursday-checkbox(type="checkbox", name="thursday")
+                label(for="thursday-checkbox") Thursday
+            .field
+              .ui.checkbox
+                input#friday-checkbox(type="checkbox", name="friday")
+                label(for="friday-checkbox") Friday
+            .field
+              .ui.checkbox
+                input#saturday-checkbox(type="checkbox", name="saturday")
+                label(for="saturday-checkbox") Saturday
+            .field
+              .ui.checkbox
+                input#sunday-checkbox(type="checkbox", name="sunday")
+                label(for="sunday-checkbox") Sunday
+          .field
+            label Description
+            textarea
+          .field
+            label Admission Price
+            .ui.labeled.input
+              .ui.label $
+              input(type="number")
+          .field
+            .ui.checkbox
+              input#repeat-checkbox(type="checkbox", name="repeat")
+              label(for="repeat-checkbox") Repeat weekly
+                
+              
       hr.ui.divider      
       
       .ui.divider.hidden
