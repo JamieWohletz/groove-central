@@ -1,0 +1,62 @@
+title: Groove Central
+baseUri: /api
+version: v1
+
+/users:
+  post:
+  /{user-id}:
+    get:
+    patch:
+    delete:
+    /ratings:
+      post:
+/studios:
+  post:
+  /{studio-id}:
+    get:
+    patch:
+    delete:
+    /classes:
+      get:
+        queryParameters:
+          offset:
+          limit:
+          startTime:
+    /styles:
+      /{style-id}:
+        /classes:
+          get:
+/classes:
+  post:
+  /{class-id}:
+    get:
+    patch:
+    delete:
+    /ratings:
+      post:
+    /offerings:
+      get:
+        queryParameters:
+          startDate:
+          endDate:
+/styles:
+  get:
+  post:
+/cities:
+  post:
+  /{city-id}:
+    get:
+    /studios:
+      get:
+        queryParameters:
+          offset:
+          limit:
+          near:
+          radius:
+/states:
+  get:
+  post:
+  /{state-id}:
+    get:
+    /cities:
+      get:

@@ -13,6 +13,7 @@
     "jade": "~1.11.0",
     "morgan": "~1.6.1",
     "mysql": "^2.9.0",
+    "osprey": "^0.2.0-beta.6",
     "passport": "^0.3.0",
     "sequelize": "^3.8.0",
     "sequelize-cli": "^1.9.1",
